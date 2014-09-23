@@ -14,7 +14,7 @@ class devenv::shell {
   vcsrepo { "${home}/config/fasd":
     ensure   => present,
     provider => 'git',
-    source   => 'git://github.com/clvv/fasd.git',
+    source   => 'git@github.com:clvv/fasd.git',
     revision => 'master',
   }
 
