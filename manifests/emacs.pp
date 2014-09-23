@@ -9,6 +9,7 @@ class devenv::emacs {
     provider => 'git',
     source   => 'git@github.com:dandavison/emacs-config.git',
     revision => 'master',
+    identity => $devenv::ssh_key,
   }
 
   file { "${home}/.emacs":

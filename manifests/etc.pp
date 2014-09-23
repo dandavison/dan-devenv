@@ -9,6 +9,7 @@ class devenv::etc {
     provider => 'git',
     source   => 'git@github.counsyl.com:dan/config.git',
     revision => 'master',
+    identity => $devenv::ssh_key,
   }
 
   file { "${home}/.dircolors":

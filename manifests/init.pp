@@ -12,6 +12,8 @@ class devenv {
     }
   }
 
+  $ssh_key = "${home}/.ssh/id_rsa"
+
   include devenv::bin
   include devenv::misc
   include devenv::shell

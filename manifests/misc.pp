@@ -7,6 +7,7 @@ class devenv::misc {
     provider => 'git',
     source   => 'git@github.counsyl.com:dan/misc.git',
     revision => 'master',
+    identity => $devenv::ssh_key,
   }
 
 }

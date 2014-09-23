@@ -9,6 +9,7 @@ class devenv::shell {
     provider => 'git',
     source   => 'git@github.com:dandavison/shell-config.git',
     revision => 'master',
+    identity => $devenv::ssh_key,
   }
 
   vcsrepo { "${home}/config/fasd":
@@ -16,6 +17,7 @@ class devenv::shell {
     provider => 'git',
     source   => 'git@github.com:clvv/fasd.git',
     revision => 'master',
+    identity => $devenv::ssh_key,
   }
 
   file { "${home}/.profile":

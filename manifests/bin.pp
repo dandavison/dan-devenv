@@ -7,6 +7,7 @@ class devenv::bin {
     provider => 'git',
     source   => 'git@github.com:dandavison/bin.git',
     revision => 'master',
+    identity => $devenv::ssh_key,
   }
 
 }
